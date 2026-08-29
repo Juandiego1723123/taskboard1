@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>TaskBoard</h1>
+        <p id="contador-pendientes">0 tareas pendientes</p>
+    </header>
+
+    <main>
+        <section id="form-tarea">
+            <form id="form-nueva-tarea">
+                <input type="text" id="titulo-tarea" placeholder="Nueva tarea..." required>
+                <select id="prioridad-tarea">
+                    <option value="baja">Prioridad baja</option>
+                    <option value="media" selected>Prioridad media</option>
+                    <option value="alta">Prioridad alta</option>
+                </select>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section id="tablero">
+            <div class="columna" data-estado="pendiente">
+                <h2>Por hacer</h2>
+                <div class="lista-tarjetas" id="lista-pendiente"></div>
+            </div>
+            <div class="columna" data-estado="progreso">
+                <h2>En progreso</h2>
+                <div class="lista-tarjetas" id="lista-progreso"></div>
+            </div>
+            <div class="columna" data-estado="hecho">
+                <h2>Hecho</h2>
+                <div class="lista-tarjetas" id="lista-hecho"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anio"></span> — TaskBoard</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
